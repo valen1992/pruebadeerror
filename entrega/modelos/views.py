@@ -5,9 +5,9 @@ from modelos.models import Jugadores
 
 # Create your views here.
 def create_jugador(request):
-    new_jugador= Jugadores.objects.create(name= "Juan Riquelme", price = 20)
+    new_jugador= Jugadores.objects.create(name= "Juanfer quintero", price = 20)
     print(new_jugador)
-    return HttpResponse("sE CREO eeeeeeeeeeeNuevo Jugador")
+    return HttpResponse("Se creo el nuevo jugador Jugador")
 
 
 def list_jugadores(request):
