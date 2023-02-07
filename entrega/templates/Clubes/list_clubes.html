@@ -1,0 +1,29 @@
+{% extends "base.html"%}
+
+{% block title%} 
+
+Listado de Clubes 
+
+
+{% endblock %}
+ 
+{% block content%}
+
+
+    <h1>hola deste listado de Clubes</h1>
+    <h2>Crear nuevo Club</h2> <a href="/clubes/create-club/" class="btn btn-primary">Crear</a>
+    {%for club in clubes%}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{club.name}}</h5>
+          <p class="card-text"> Su año de fundacion es {{club.fundacion}}</p>
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+
+
+    {% endfor %}
+
+{% endblock %}

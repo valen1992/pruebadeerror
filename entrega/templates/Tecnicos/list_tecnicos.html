@@ -1,0 +1,29 @@
+{% extends "base.html"%}
+
+{% block title%} 
+
+Listado de Tecnicos 
+
+
+{% endblock %}
+ 
+{% block content%}
+
+
+    <h1>hola deste listado de tecnicos</h1>
+    <h2>Crear nuevo tecnico</h2> <a href="/tecnicos/create-tecnico/" class="btn btn-primary">Crear</a>
+    {%for tecnico in tecnicos%}
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{tecnico.name}}</h5>
+          <p class="card-text"> Su club es {{tecnico.club}}</p>
+          <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+      </div>
+
+
+    {% endfor %}
+
+{% endblock %}
